@@ -136,7 +136,7 @@ module.exports = {
           {
             name: '音乐名',
             artist: '作者',
-            url: '/music/index.mp3',
+            url: '/music/邵帅 - 写给黄淮.mp3',
             cover: '/img/hero.jpg'
           }
         ],
