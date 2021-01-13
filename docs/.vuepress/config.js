@@ -1,7 +1,10 @@
+const path = require('path')
 module.exports = {
-  title: "远方有你伴余生",  //这里是博客标题
-  description: '愿时光能缓，愿故人不散！.',  //博客描述
+  palette: path.resolve(__dirname, 'styles/palette.styl'),
+  title: "冬烘先生",  //这里是博客标题
+  description: '愿时光能缓，愿故人不散！',  //博客描述
   // dest: 'public',  //博客部署时输出的文件夹
+  base: '/',
   head: [
     ['link', {rel: 'icon', href: '/img/hero.jpg'}],  //favicon图标设置
     ['meta', {name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no'}]
@@ -34,14 +37,7 @@ module.exports = {
       }
     ],
     //侧边栏设置
-    sidebar: {
-      '/docs/theme-reco/': [
-        '',
-        'theme',
-        'plugin',
-        'api'
-      ]
-    },
+    sidebar: 'auto',
     type: 'blog',
     // 博客设置
     blogConfig: {
@@ -54,21 +50,6 @@ module.exports = {
         text: 'Tag' // 默认 “标签”
       }
     },
-    //友情链接
-    friendLink: [
-      {
-        title: '午后南杂',
-        desc: 'Enjoy when you can, and endure when you must.',
-        email: '1156743527@qq.com',
-        link: 'https://www.recoluan.com'
-      },
-      {
-        title: '远方有你伴余生',
-        desc: '愿时光能缓，愿故人不散！',
-        avatar: "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-        link: 'https://vuepress-theme-reco.recoluan.com'
-      },
-    ],
     //博客自定义LOGO
     logo: '/img/hero.jpg',
     // 搜索设置
@@ -79,7 +60,7 @@ module.exports = {
     // 最后更新时间
     lastUpdated: 'Last Updated',
     // 作者
-    author: '詹浩',
+    author: '冬烘先生',
     // 作者头像
     authorAvatar: '/img/hero.jpg',
     // 备案号
@@ -117,15 +98,12 @@ module.exports = {
       {
         // theme: ['blackCat', 'whiteCat', 'haru1', 'haru2', 'haruto', 'koharu', 'izumi', 'shizuku', 'wanko', 'miku', 'z16'],
         theme: [ 'koharu'],
-        clean: false,
-        messages: {
-          welcome: '我是lookroot欢迎你的关注 ',
-          home: '心里的花，我想要带你回家。',
-          theme: '好吧，希望你能喜欢我的其他小伙伴。',
-          close: '再见哦'
-        },
-        width: 240,
-        height: 352
+        clean: true,
+        width: 180,
+        modelStyle: {
+          right: '50px',
+          bottom: '50px'
+        }
       }
     ],
     [
@@ -134,8 +112,8 @@ module.exports = {
       {
         audios: [
           {
-            name: '音乐名',
-            artist: '作者',
+            name: '写给黄淮',
+            artist: '邵帅',
             url: '/music/邵帅 - 写给黄淮.mp3',
             cover: '/img/hero.jpg'
           }
@@ -156,8 +134,8 @@ module.exports = {
         zIndex: 999999999           // z-index property of the canvas, default: 999999999
       }
     ],
-    ["vuepress-plugin-nuggets-style-copy", {
-      copyText: "复制代码",  //vuepress复制粘贴提示插件P 先安装在配置 npm install vuepress-plugin-nuggets-style-copy --save
+    ["vuepress-plugin-nuggets-styles-copy", {
+      copyText: "复制代码",  //vuepress复制粘贴提示插件P 先安装在配置 npm install vuepress-plugin-nuggets-styles-copy --save
       tip: {
         content: "复制成功!"
       }
