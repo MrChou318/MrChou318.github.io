@@ -23,18 +23,6 @@ module.exports = {
           {text: '正则表达式手册', link: 'https://tool.oschina.net/uploads/apidocs/jquery/regexp.html', icon: 'reco-coding'}
         ]
       },
-      {
-        text: '关于',
-        icon: 'reco-message',
-        items: [
-          {text: 'GitHub', link: 'https://github.com/glassy-sky-lisong', icon: 'reco-github'},
-          {text: '博客园', link: 'https://cnblogs.com/glassysky', icon: 'reco-bokeyuan'},
-          {text: '掘金', link: 'https://juejin.im', icon: 'reco-juejin'},
-          {text: '哔哩哔哩', link: 'https://space.bilibili.com/476991968', icon: 'reco-bilibili'},
-          {text: '码云', link: 'https://gitee.com/glassyskyforgame', icon: 'reco-mayun'},
-          {text: 'Twitter', link: 'https://twitter.com/GLASSYSKY113', icon: 'reco-twitter'}
-        ]
-      }
     ],
     //侧边栏设置
     sidebar: 'auto',
@@ -101,7 +89,7 @@ module.exports = {
         clean: true,
         width: 180,
         modelStyle: {
-          right: '50px',
+          left: '50px',
           bottom: '50px'
         }
       }
@@ -121,7 +109,7 @@ module.exports = {
         autoShrink: true,
         shrinkMode: 'mini',
         position: {
-          top: '50vh'
+          top: '40vh'
         }
       }
     ],

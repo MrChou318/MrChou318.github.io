@@ -1,0 +1,104 @@
+<html>
+  <body>
+    <div class="wrapper" id="drop-items">
+      <div class="item">
+        <div class="icon bg1"></div>
+        <div class="description">小蓝</div>
+      </div>
+      <div class="item">
+        <div class="icon bg2"></div>
+        <div class="description">吕吕</div>
+      </div>
+      <div class="item">
+        <div class="icon bg3"></div>
+        <div class="description">泥子</div>
+      </div>
+      <div class="item">
+        <div class="icon bg4"></div>
+        <div class="description">紫紫</div>
+      </div>
+    </div>
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+  <script>
+    // 获取列表容器
+    const dropItems = document.getElementById('drop-items')
+
+    // 调用 Sortable.js 里的构造函数进行拖拽控制
+    new Sortable(dropItems, {
+      animation: 350,
+      // 定义选中时的类名
+      chosenClass: "sortable-chosen",
+      // 定义拖拽时的类名
+      dragClass: "sortable-drag",
+    });
+  </script>
+  <style>
+    html {
+      font-size: 10px;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background: #e7dbbb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .wrapper {
+      margin: 0 auto;
+      width: 40rem;
+      height: 40rem;
+      background: #e7dbbb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .item {
+      width: 80%;
+      height: 8rem;
+      background: #ece7d9;
+      box-shadow: .2em .2rem 1rem rgba(0,0,0, .3);
+      border-radius: 8rem;
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+    .icon {
+      width: 6rem;
+      height: 6rem;
+      border-radius: 50%;
+    }
+    .bg1 {
+      background: #0f9fff;
+    }
+    .bg2 {
+      background: #00A77D;
+    }
+    .bg3 {
+      background: #9a6e3a;
+    }
+    .bg4 {
+      background: #945fb9;
+    }
+
+    .description {
+      padding-left: 1rem;
+      font-size: 1.4rem;
+    }
+
+    /* 选中的item的类 */
+    .sortable-chosen {
+      box-shadow: .8rem .8rem 3.2rem rgba(0, 0, 0, 0.3);
+    }
+
+    /* 拖拽的item的类 */
+    .sortable-drag {
+      opacity: 0;
+    }
+  </style>
+</html>
