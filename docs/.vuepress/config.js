@@ -15,14 +15,14 @@ module.exports = {
     nav: [
       {text: '主页', link: '/', icon: 'reco-home'},
       {text: '时间轴', link: '/timeline/', icon: 'reco-date'},
-      {
-        text: '工具推荐',
-        icon: 'reco-message',
-        items: [
-          {text: 'codeSandbox', link: 'https://codesandbox.io', icon: 'reco-coding'},
-          {text: '正则表达式手册', link: 'https://tool.oschina.net/uploads/apidocs/jquery/regexp.html', icon: 'reco-coding'}
-        ]
-      },
+      // {
+      //   text: '工具推荐',
+      //   icon: 'reco-message',
+      //   items: [
+      //     {text: 'codeSandbox', link: 'https://codesandbox.io', icon: 'reco-coding'},
+      //     {text: '正则表达式手册', link: 'https://tool.oschina.net/uploads/apidocs/jquery/regexp.html', icon: 'reco-coding'}
+      //   ]
+      // },
     ],
     //侧边栏设置
     sidebar: 'auto',
@@ -87,10 +87,10 @@ module.exports = {
         // theme: ['blackCat', 'whiteCat', 'haru1', 'haru2', 'haruto', 'koharu', 'izumi', 'shizuku', 'wanko', 'miku', 'z16'],
         theme: [ 'koharu'],
         clean: true,
-        width: 180,
+        width: 150,
         modelStyle: {
-          left: '50px',
-          bottom: '50px'
+          left: '30px',
+          bottom: '40px'
         }
       }
     ],
